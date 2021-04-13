@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2c3e50</color>
+    <color name="colorPrimaryDark">#1B3147</color>
+    <color name="colorAccent">#3498db</color>
+    <color name="white">#ffff</color>
+    <color name="bluePrimary">#ff0288d1</color>
+    <color name="redPrimary">#ffcc0000</color>
+    <color name="redLight">#ff471a</color>
+
+
+    <color name="green">#ff669900</color>
+    <color name="greenDark">#55760E</color>
+    <color name="androidBlue">#ff92e8dc</color>
+
+    <color name="window_background">#8AA5B9</color> 
+</resources>
+

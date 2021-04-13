@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+     <ScrollView
+        android:layout_marginBottom="20dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/noviKomitentLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/perosn2"
+                    android:tint="@color/white"/>
+		        <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="25dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:id="@+id/username" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/phone"
+                    android:tint="@color/white"/>
+		        <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:id="@+id/phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/email"
+                    android:tint="@color/white"/>
+		        <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="match_parent"
+			        android:id="@+id/email" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/OIB"
+                    android:tint="@color/white"/>
+		        <TextView
+                    android:textColor="@color/white"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:id="@+id/oib" />
+            </LinearLayout>
+
+	        <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal"
+		        android:padding="10dp"
+		        android:layout_marginLeft="10dp">
+		        <ImageView
+			        android:layout_width="20dp"
+			        android:layout_height="40dp"
+			        android:layout_marginRight="20dp"
+			        android:src="@mipmap/location"
+			        android:tint="@color/white"/>
+		        <TextView
+			        android:textColor="@color/white"
+			        android:gravity="center_vertical"
+			        android:textSize="20dp"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:id="@+id/adresa" />
+	        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <RadioGroup
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+		<RadioButton
+			android:text="Dodaj poznatu lokaciju"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:checked="true"
+			android:id="@+id/poznataLokBtn"/>
+		<RadioButton
+			android:text="Dodaj novu lokaciju"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/novaLokBtn" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poznataLokLayout"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:paddingTop="10dp">
+	        <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/abc_ic_search_api_material"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/searchIcon"/>
+            <EditText
+                android:inputType="text"
+                android:layout_weight="80"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:hint="Upišite traženi pojam..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchInput"/>
+        </LinearLayout>
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+			    <LinearLayout
+                    android:layout_marginTop="10dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="50dp">
+                    <TextView
+                        android:textColor="@color/white"
+			            android:layout_width="150dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:textAlignment="center"
+			            android:text="NAZIV"
+			            android:id="@+id/text1"
+			            android:textStyle="bold" />
+		            <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="150dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:textAlignment="center"
+			            android:text="MJESTO"
+			            android:id="@+id/text2"
+			            android:textStyle="bold" />
+                    <TextView
+                        android:textColor="@color/white"
+                        android:layout_width="170dp"
+			            android:layout_height="match_parent"
+			            android:gravity="center"
+			            android:textAlignment="center"
+			            android:text="ADRESA"
+			            android:id="@+id/text3"
+			            android:textStyle="bold" />
+	            </LinearLayout>
+                <ListView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lokacijaListView"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:text="Nije pronađena lokacija sa unesenim pojmom!"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultMessage" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_marginBottom="40dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/novaLokLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Naziv lokacije"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nazivTextView" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:id="@+id/nazivInput" />
+            <TextView
+                android:visibility="invisible"
+                android:text="Unesite naziv lokacije*"
+                android:textColor="@color/redPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgNaziv" />
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Općina / Županija"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gradTextView" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+				<TextView
+                    android:textColor="@color/white"
+                    android:textSize="35px"
+					android:text=""
+                    android:layout_weight="4"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:id="@+id/opcinaData" />
+                <Button
+                    android:layout_weight="1"
+					android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableTint="@color/androidBlue"
+                    android:drawableEnd="@mipmap/lista"
+                    android:id="@+id/odaberiOpcinuBtn" />
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Mjesto"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mjestoTextView" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:id="@+id/mjestoInput" />
+            <TextView
+                android:text="Unesite mjesto*"
+                android:visibility="invisible"
+                android:textColor="@color/redPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgMjesto" />
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Naselje"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/naseljeTextView" />
+            <Spinner
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:enabled="false"
+			    android:id="@+id/spinnerNaselja" />
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Ulica i broj"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ulicaBrTextview" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:id="@+id/ulicaBrInput" />
+            <TextView
+                android:text="Unesite adresu*"
+                android:visibility="invisible"
+                android:textColor="@color/redPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgAdresa" />
+            <TextView
+                android:textColor="@color/bluePrimary"
+                android:text="Tip lokacije"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tipLokacijeTV" />
+            <Spinner
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:enabled="false"
+			    android:id="@+id/spinnerTipLokacije" />
+            <CheckBox
+                android:text="Ankete po pozicijama"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:checked="true"
+                android:id="@+id/anketePoPozicijama" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:paddingHorizontal="20dp"
+                    android:width="120dp"
+                    android:text="Odustani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/cancelBtn"
+                    android:textColor="@color/redPrimary"
+                    android:id="@+id/odustaniBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <Button
+                    android:width="120dp"
+                    android:text="Spremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/saveBtn"
+                    android:textColor="@color/green"
+                    android:id="@+id/spremiBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

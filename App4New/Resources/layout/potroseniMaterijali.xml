@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <TextView
+        android:paddingHorizontal="20dp"
+        android:textColor="#ff0288d1"
+		android:text="Radni nalog"
+		android:textSize="40px"
+        android:layout_marginTop="70dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/radniNalogTV"/>
+	<Spinner
+        android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/spinnerRadniNalog" />
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:id="@+id/prikazDropdowna">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:padding="20dp">
+			<TextView
+                android:textColor="#ff0288d1"
+				android:text="Partner"
+				android:textSize="40px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/partnerTV"/>
+			<Spinner
+                android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/spinnerPartner" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="50"
+            android:padding="20dp">
+            <TextView
+                android:textColor="#ff0288d1"
+				android:text="Lokacija"
+				android:textSize="40px"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/lokacijaTV"/>
+            <Spinner
+                android:layout_marginTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/spinnerLokacija" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="200dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Za ovu lokaciju je izdana potvrda!"
+        android:textSize="35px"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:id="@+id/messagePotvrda" />
+	<ScrollView
+        android:layout_marginTop="220dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/prikazMaterijala">
+		<HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<LinearLayout
+					android:layout_marginRight="40dp"
+                    android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp">
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="50dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="R.Br"
+						android:id="@+id/text1"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="70dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="Šifra"
+						android:id="@+id/text2"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="200dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Naziv"
+						android:id="@+id/text3"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Količina"
+						android:id="@+id/text4"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Cijena"
+						android:id="@+id/text5"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+						android:layout_height="match_parent"
+                        android:textSize="35px"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Iznos"
+						android:id="@+id/text6"
+						android:textStyle="bold" />
+				</LinearLayout>
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/materijaliListView"
+					android:scrollbars="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+		</HorizontalScrollView>
+	</ScrollView>
+    <TextView
+        android:text="Nema potrošenih materijala!"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message" />
+
+    <RelativeLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:id="@+id/ukupnoKn">
+		<TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+			android:text="Ukupno Materijali:"
+            android:textStyle="bold"
+            android:textSize="35px"
+			android:layout_width="160dp"
+			android:layout_height="50dp"
+			android:id="@+id/textView1" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="160dp"
+			android:text="00.00"
+            android:textSize="35px"
+            android:textStyle="bold"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:id="@+id/ukupanIznosTextView" />
+        <Button
+            android:layout_alignParentRight="true"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+            android:background="@mipmap/addBtn"
+		    android:id="@+id/noviMaterijalBtn" />
+    </RelativeLayout>
+</RelativeLayout>

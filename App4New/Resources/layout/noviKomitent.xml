@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <RadioGroup
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+		<RadioButton
+			android:text="Dodaj poznatog komitenta"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:checked="true"
+			android:id="@+id/poznatiKomBtn"/>
+		<RadioButton
+			android:text="Dodaj novog komitenta"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/noviKomBtn" />
+    </RadioGroup>
+
+    <ScrollView
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/noviKomitentLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:text="Odaberite opciju"
+                android:textSize="35px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="#ff0288d1"
+                android:id="@+id/odaberiteOpcijuTextView" />
+            <RadioGroup
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup1">
+                <RadioButton
+                    android:text="Pravna osoba"
+                    android:checked="true"
+                    android:textSize="35px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pravnaOsobaRBtn" />
+                <RadioButton
+                    android:text="Fizička osoba"
+                    android:checked="false"
+                    android:textSize="35px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fizickaOsobaRBtn" />
+            </RadioGroup>
+            <TextView
+                android:text="Naziv partnera"
+                android:textColor="#ff0288d1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nazivPartneraTextView" />
+            <EditText
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint=""
+                android:id="@+id/nazivInput" />
+            <TextView
+                android:text="Unesite naziv partnera*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgPartnera" />
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout1">
+			    <EditText
+                    android:hint="Ime"
+                    android:inputType="text"
+				    android:layout_width="0dp"
+                    android:layout_weight="2"
+				    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/imeInput"/>
+			    <EditText
+                    android:hint="Prezime"
+                    android:inputType="text"
+				    android:layout_width="0dp"
+                    android:layout_weight="3"
+				    android:layout_height="match_parent"
+                    android:id="@+id/prezimeInput"/>
+            </LinearLayout>
+            <TextView
+                android:text="Unesite ime i prezime partnera*"
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgPartnera2" />
+            <TextView
+                android:textColor="#ff0288d1"
+                android:text="OIB"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/OIBTextView" />
+            <EditText
+                android:visibility="gone"
+                android:inputType="number"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/OIBInput" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_marginRight="10dp"
+                android:id="@+id/linearLayout2">
+			    <EditText
+                    android:hint="OIB"
+                    android:inputType="number"
+				    android:layout_width="0dp"
+                    android:layout_weight="4"
+				    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/OIB1Input"/>
+			    <EditText
+                    android:hint="OIB 2"
+                    android:inputType="number"
+				    android:layout_width="0dp"
+                    android:layout_weight="3"
+				    android:layout_height="match_parent"
+                    android:id="@+id/OIB2Input"/>
+            </LinearLayout>
+            <TextView
+                android:text="Unesite OIB*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgOIB" />
+            <TextView
+                android:textColor="#ff0288d1"
+                android:text="Adresa"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adresaTextView" />
+            <EditText
+                android:inputType="text"
+                android:layout_marginRight="10dp"
+                android:hint="Ulica i kućni broj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adresaInput" />
+            <TextView
+                android:text="Unesite ulicu i kućni broj*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgUlica" />
+            <EditText
+                android:layout_marginTop= "10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Poštanski broj"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/postanskiBrojInput" />
+            <TextView
+                android:text="Unesite poštanski broj*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgPostanskiBroj" />
+            <EditText
+                android:inputType="text"
+                android:layout_marginTop= "10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Mjesto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mjestoInput" />
+            <TextView
+                android:text="Unesite mjesto*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgMjesto" />
+            <TextView
+                android:text="Kontakt"
+                android:textSize="40px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="#ff0288d1"
+                android:id="@+id/telefonTextView" />
+            <EditText
+                android:layout_marginRight="10dp"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/telefonInput" />
+            <TextView
+                android:text="Unesite broj telefona*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgTelefon" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="20dp">
+                <Button
+                    android:paddingHorizontal="20dp"
+                    android:width="120dp"
+                    android:text="Odustani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/cancelBtn"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:id="@+id/odustaniBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <Button
+                    android:width="120dp"
+                    android:text="Spremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/saveBtn"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:id="@+id/spremiBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>    
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/poznatiKomitentLayout">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/abc_ic_search_api_material"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/searchIcon"/>
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="40dp"
+                android:paddingLeft="10dp"
+                android:hint="Upišite traženi pojam..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchInput" />
+        </LinearLayout>
+	    <LinearLayout
+            android:layout_marginTop="10dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp">
+		    <TextView
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="match_parent"
+			    android:gravity="center"
+			    android:textAlignment="center"
+			    android:text="NAZIV"
+			    android:id="@+id/text1"
+			    android:textStyle="bold" />
+            <TextView
+			    android:layout_width="0dp"
+			    android:layout_weight="1"
+			    android:layout_height="match_parent"
+			    android:gravity="center"
+			    android:textAlignment="center"
+			    android:text="KONTAKT"
+			    android:id="@+id/text2"
+			    android:textStyle="bold" />
+	    </LinearLayout>
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/partneriListView"/>
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:text="Nema rezulta!"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultMessage" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <RadioGroup
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+		<RadioButton
+			android:text="Dodaj poznati materijal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+            android:checked="true"
+			android:id="@+id/poznatiMatBtn"/>
+		<RadioButton
+            android:visibility="gone"
+			android:text="Dodaj novi materijal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/noviMatBtn" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/prikazPoznatihMaterijala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100">
+	        <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/abc_ic_search_api_material"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/searchIcon"/>
+            <EditText
+                android:inputType="text"
+                android:layout_weight="80"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:hint="Upišite traženi pojam..."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchInput"/>
+        </LinearLayout>
+	    <LinearLayout
+            android:layout_marginTop="10dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="50dp">
+		    <TextView
+			    android:layout_width="0dp"
+			    android:layout_weight="3"
+			    android:layout_height="match_parent"
+			    android:gravity="center"
+			    android:textAlignment="center"
+			    android:text="NAZIV"
+			    android:id="@+id/text2"
+			    android:textStyle="bold"
+                android:textColor="@color/white"/>
+            <TextView
+                android:textColor="@color/white"
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="match_parent"
+			    android:gravity="center"
+			    android:textAlignment="center"
+			    android:text="GRUPA"
+			    android:id="@+id/text3"
+			    android:textStyle="bold" />
+            <TextView
+                android:textColor="@color/white"
+			    android:layout_width="0dp"
+			    android:layout_weight="2"
+			    android:layout_height="match_parent"
+			    android:gravity="center"
+			    android:textAlignment="center"
+			    android:text="CIJENA"
+			    android:id="@+id/text4"
+			    android:textStyle="bold" />
+	    </LinearLayout>
+        <ListView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/materijalListView"/>
+        <TextView
+            android:layout_margin="50dp"
+            android:text="Nema rezultata!"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultMessage" />
+    </LinearLayout>
+
+    <ScrollView
+        android:visibility="gone"
+        android:layout_marginBottom="20dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/prikazNovogMaterijala">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		        <TextView
+                    android:textSize="35px"
+			        android:text="* Naziv materijala:"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/textView1" />
+		        <EditText
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/nazivInput" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		        <TextView
+                    android:textSize="35px"
+			        android:text="Grupa"
+			        android:layout_width="70dp"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/grupaTV" />
+		        <Spinner
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:id="@+id/spinnerGrupa" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		        <TextView
+                    android:textSize="35px"
+			        android:text="Barkod:"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/textView11" />
+		        <EditText
+                    android:textSize="35px"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/barcodeInput" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		        <TextView
+                    android:textSize="35px"
+			        android:text="* Cijena:"
+			        android:layout_width="70dp"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/textView2" />
+                <EditText
+				    android:textSize="35px"
+                    android:digits="0123456789,"
+				    android:inputType="text"
+				    android:layout_width="150dp"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/cijenaInput"
+				    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:textSize="35px"
+			        android:text="kn"
+			        android:layout_width="70dp"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/textView3" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+		        <TextView
+                    android:textSize="35px"
+			        android:text="* Količina:"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/kolicicnaTV" />
+                <EditText
+				    android:textSize="35px"
+                    android:digits="0123456789,"
+				    android:inputType="text"
+				    android:layout_width="80dp"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/kolicinaInput"
+				    android:textStyle="bold" />
+		        <Spinner
+			        android:layout_width="100dp"
+			        android:layout_height="match_parent"
+			        android:id="@+id/spinnerMjernaJedinica" />
+            </LinearLayout>
+            <TextView
+                android:layout_marginHorizontal="20dp"
+                android:text="Popunite sva polja koju su označena zvijezdicom*"
+                android:visibility="invisible"
+                android:textColor="@color/redPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/message"/>
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="40dp">
+                <Button
+                    android:paddingHorizontal="20dp"
+                    android:width="120dp"
+                    android:text="Odustani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/cancelBtn"
+                    android:textColor="@color/redPrimary"
+                    android:id="@+id/odustaniBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <Button
+                    android:width="120dp"
+                    android:text="Spremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/saveBtn"
+                    android:textColor="@color/green"
+                    android:id="@+id/spremiBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

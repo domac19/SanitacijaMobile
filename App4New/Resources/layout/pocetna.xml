@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <LinearLayout
+        android:id="@+id/profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/perosn2"
+            android:tint="@color/white"/>
+		<TextView
+            android:text="KJois Ivekovic"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:textSize="25dp"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:id="@+id/userNameTextView" />
+    </LinearLayout>
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:id="@+id/layoutSkladiste">
+		<TextView
+			android:text="Skladište:"
+			android:textSize="40px"
+			android:textColor="@color/white"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/skladisteTV" />
+		<Spinner
+            android:layout_marginLeft="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/spinnerSkladiste" />
+	</LinearLayout>
+    <TextView
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:text="Odaberite aktivno skladište*"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@color/redPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/messageError"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+        <Button
+            android:background="@mipmap/borderBlueBtn"
+            android:text="radni nalozi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deratizacijaBtn"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:textSize="40px"
+            android:textStyle="bold"
+            android:textColor="@color/bluePrimary"/>
+        <Button
+            android:text="Pregled odrađenih anketa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pregledOdradenihDeratizacijaBtn"
+            android:background="@mipmap/borderbluebtn"
+            android:textColor="@color/bluePrimary"
+            android:textStyle="bold"    
+            android:layout_marginTop="20dp"
+            android:padding="50px"
+            android:textSize="40px"/>
+        <Button
+            android:text="Pregled potrošenih materijala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pregledPotrosenihMaterijalaBtn"
+            android:background="@mipmap/borderbluebtn"
+            android:textColor="@color/bluePrimary"
+            android:textStyle="bold"    
+            android:layout_marginTop="20dp"
+            android:padding="50px"
+            android:textSize="40px"/>
+        <Button
+            android:textStyle="bold"
+            android:text="Sinkronizacija matičnih podataka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/syncMasterDataBtn"
+            android:background="@mipmap/borderbluebtn"
+            android:layout_marginTop="20dp"
+            android:padding="50px"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"/>
+        <Button
+            android:textStyle="bold"
+            android:text="Sinkronizacija radnih naloga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/syncBtn"
+            android:background="@mipmap/borderbluebtn"
+            android:layout_marginTop="20dp"
+            android:padding="50px"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|bottom">
+        <TextView
+            android:text="Verzija: 1.0"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/verzijaTextView"/>
+    </RelativeLayout>
+</LinearLayout>

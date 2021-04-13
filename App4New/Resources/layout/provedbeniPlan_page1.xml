@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:textAlignment="center"
+                    android:text="PREGLED OBJEKTA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/naslovTextView"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="50px"
+                    android:textColor="#ff0288d1"/>
+                 <!--<LinearLayout
+					android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+		            <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+			            android:id="@+id/textView1" />
+		            <EditText
+                        android:text="22:22"
+			            android:layout_width="80dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/vrijemeInput" />
+                </LinearLayout>-->
+                <TimePicker
+                    android:layout_marginHorizontal="40px"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vrijeme"/>
+				<DatePicker
+				    android:layout_width="match_parent"
+				    android:layout_height="400.0dp"
+				    android:id="@+id/datum"
+				    android:layout_marginHorizontal="40px"
+				    android:layout_marginTop="0.0dp" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/datumLinearLayout">
+                    <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Datum izvida:"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView11" />
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="40px"
+                        android:textColor="@android:color/darker_gray"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/datumTV" />
+                </LinearLayout>
+
+                <!--Higijensko stanje-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_marginVertical="20dp"
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Higijensko stanje svih prostora:"
+			            android:layout_width="170dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/higijenskoStanjeTV" />
+                    <RadioGroup
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+		                <RadioButton
+			                android:text="DOBRO"
+                            android:layout_width="90dp"
+			                android:layout_height="wrap_content"
+                            android:checked="true"
+			                android:id="@+id/higijenskoStanjeDobroRBtn"/>
+		                <RadioButton
+			                android:text="LOŠE"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/higijenskoStanjeLoseRBtn" />
+                    </RadioGroup>
+                </LinearLayout>
+                <EditText
+                    android:visibility="gone"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/higijenskoStanjeLoseInput" />
+                <!--Građevinsko stanje-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_marginVertical="20dp"
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Građevinsko stanje prostora:"
+			            android:layout_width="170dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/gradevinskoStanjeTV" />
+                    <RadioGroup
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+		                <RadioButton
+			                android:text="DOBRO"
+			                android:layout_width="90dp"
+			                android:layout_height="wrap_content"
+                            android:checked="true"
+			                android:id="@+id/gradevinskoStanjeDobroRBtn"/>
+		                <RadioButton
+			                android:text="LOŠE"
+                            android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/gradevinskoStanjeLoseRBtn" />
+                    </RadioGroup>
+                </LinearLayout>
+                <EditText
+                    android:visibility="gone"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/gradevinskoStanjeLoseInput" />
+                <!--Procjena tehničke opremljenosti-->
+                <TextView
+                    android:layout_marginVertical="20dp"
+                    android:textSize="40px"
+                    android:textColor="#ff0288d1"
+			        android:text="Procjena tehničke opremljenosti prostora (samo za hotele, kuhinje, industriju):"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/tehnickaOpremljenostTV" />
+                <RadioGroup
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+		            <RadioButton
+			            android:text="DOBRO"
+                        android:layout_width="90dp"
+			            android:layout_height="wrap_content"
+                        android:checked="true"
+			            android:id="@+id/tehnickaOpremljenostDobroRBtn"/>
+		            <RadioButton
+			            android:text="LOŠE"
+			            android:layout_width="90dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/tehnickaOpremljenostLoseRBtn" />
+                </RadioGroup>
+                <TextView
+                    android:layout_marginTop="40dp"
+					android:layout_marginBottom="20dp"
+                    android:textSize="40px"
+                    android:textColor="#ff0288d1"
+			        android:text="Infestiranost prostora, prema izjavi odgovornih osoba prostora:"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/bro1TV" />
+
+				<android.support.v7.widget.RecyclerView
+                    android:id="@+id/nametniciListView"
+                    android:layout_marginTop="20dp"
+                    android:scrollbars="vertical"  
+                    android:layout_width="match_parent"  
+                    android:layout_height="400dp"/>
+            </LinearLayout>
+
+			<LinearLayout
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/androidBlue"
+                        android:id="@+id/dot1"/>
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/dot2"/>
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/dot3"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>   
+</LinearLayout>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <ScrollView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+		    <CheckBox
+			    android:text="Nije Provedeno"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+			    android:id="@+id/neprovedenoRadioBtn" />
+		    <TextView
+			    android:text="Razlog neprovedene pozicije"
+			    android:textSize="35px"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:textColor="#ff8c99a0"
+			    android:layout_marginBottom="15dp"
+			    android:id="@+id/neprovedenoTextView" />
+		    <Spinner
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:enabled="false"
+			    android:id="@+id/spinnerNeprovedeno" />
+            <TextView
+                android:text="Napomena"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/napomeneTextView"
+                android:layout_marginBottom="10dp"
+                android:textSize="40px"
+                android:textColor="#ff0288d1"/>
+            <EditText
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="top|left"
+                android:maxLines="4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/napomeneInput"
+                android:drawableRight="@android:color/black"
+                android:hint="Upiši napomenu ovdje..." />
+            <TextView
+                android:text="Maksimalan broj znakova je 512*"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgNapomena" />
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:drawableStart="@mipmap/save"
+                    android:text="   Spremi"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:background="@mipmap/saveBtn"
+                    android:drawableTint="@android:color/holo_green_dark"
+                    android:id="@+id/saveBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"/>
+            </RelativeLayout>
+        </LinearLayout>        
+    </ScrollView>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/colorPrimary"
+                android:id="@+id/dot1"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/colorPrimary"
+                android:id="@+id/dot2"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/colorPrimary"
+                android:id="@+id/dot3"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/androidBlue"
+                android:id="@+id/dot4"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

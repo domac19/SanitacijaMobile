@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#ff0288d1"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarLogin"/>
+    <TextView
+        android:layout_marginTop="30dp"        
+        android:text="Odaberite opciju za izradu"
+        android:textColor="#ff0288d1"
+        android:gravity="center"
+        android:textSize="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/naslov1TextView" />
+    <TextView
+        android:layout_marginBottom="30dp"        
+        android:text="nove deratizacije"
+        android:textColor="#ff0288d1"
+        android:gravity="center"
+        android:textSize="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/naslov2TextView" />
+    <Button
+        android:layout_marginHorizontal= "20dp"
+        android:text="Prema radnom nalogom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radniNalogBtn"
+        android:background="@mipmap/blueBtn"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:textSize="40px"/>
+    <Button
+        android:layout_marginHorizontal= "20dp"
+        android:text="Bez radnog naloga (ad-hoc)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bezRadnogNalogaBtn"
+        android:background="@mipmap/blueBtn"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:textSize="40px"/>
+</LinearLayout>

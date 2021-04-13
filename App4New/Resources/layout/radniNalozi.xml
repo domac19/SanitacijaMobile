@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/abc_ic_search_api_material"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/searchIcon"/>
+        <EditText
+            android:inputType="text"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:paddingLeft="10dp"
+            android:hint="Upišite traženi pojam..."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchInput" />
+    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_marginTop="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+			<LinearLayout
+                android:orientation="horizontal"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp">
+				<TextView
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+                    android:textColor="@color/white"
+					android:text="BROJ"
+					android:id="@+id/text1"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+				<TextView
+                    android:textColor="@color/white"
+					android:layout_width="70dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="GODINA"
+					android:id="@+id/text2"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+				<TextView
+                    android:textColor="@color/white"
+					android:layout_width="160dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="SKLADIŠTE"
+					android:id="@+id/text3"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+                <TextView
+                    android:textColor="@color/white"
+					android:layout_width="120dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="DATUM OD"
+					android:id="@+id/text4"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+                <TextView
+                    android:textColor="@color/white"
+					android:layout_width="120dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="DATUM DO"
+					android:id="@+id/text5"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+				<TextView
+                    android:textColor="@color/white"
+					android:layout_width="130dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="STATUS"
+					android:id="@+id/text6"
+					android:layout_weight="25"
+					android:textStyle="bold" />
+                <TextView
+                    android:textColor="@color/white"
+					android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:textAlignment="center"
+					android:text="OBRIŠI"
+					android:id="@+id/text7"
+					android:layout_weight="25"
+                    android:layout_marginRight="10dp"
+					android:textStyle="bold" />
+			</LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"  
+                android:scrollbars="vertical"  
+                android:layout_width="fill_parent"  
+                android:layout_height="fill_parent"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:layout_marginHorizontal="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="Nije pronađen radni nalog sa unesenim pojmom!"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultMessage" />
+
+    <Button
+		android:layout_width="50dp"
+		android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/addBtn"
+		android:id="@+id/noviRadniNalogBtn" />
+</RelativeLayout>

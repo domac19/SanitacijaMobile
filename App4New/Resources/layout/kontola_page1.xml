@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <RadioButton
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:text="kutija s ljepljivim podloškama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:checked="true"
+            android:id="@+id/kutijaSLjepljivimPodloskama" />
+        <RadioButton
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:text="kutija s rodenticidima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:checked="false"
+            android:id="@+id/kutijaSRodenticima" />
+        <RadioButton
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"
+            android:text="kutija - živolovke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:checked="false"
+            android:id="@+id/kutijaZivolovke" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <TextView
+            android:text="Utvrđeno stanje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginBottom="15dp"
+            android:textSize="40px"
+            android:textColor="#ff0288d1"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:id="@+id/gridLjep"
+            android:visibility="gone">
+            <CheckBox
+                android:text="kutija uredna"
+                android:layout_marginBottom="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:checked="false"
+                android:id="@+id/kutijaUrednaLjep" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="kutija oštećena"
+                android:checked="false"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/kutijaOstecenaLjep" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="nema kutije"
+                android:layout_marginBottom="5dp"
+                android:checked="false"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/nemaKutijeLjep" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="ulovljen štakor"
+                android:checked="false"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/ulovljenStakorLjep" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="ulovljen miš"
+                android:checked="false"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/ulovljenMisLjep" />
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:visibility="gone"
+            android:id="@+id/gridRot">
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="kutija uredna"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/kutijaUrednaRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="kutija oštećena"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/kutijaOstecenaRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="nema kutije"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/nemaKutijeRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="tragovi glodanja"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/tragoviGlodanjaRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="izmet"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/izmetRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="pojedena meka"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/pojedenaMekaRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="oštećena meka"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/ostecenaMekaRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="uginuli štakor"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/uginuliStakorRot" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="uginuli miš"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/uginuliMisRot" />
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:visibility="gone"
+            android:id="@+id/gridZiv">
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="kutija uredna"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/kutijaUrednaZiv" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="kutija oštećena"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/kutijaOstecenaZiv" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="nema kutije"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/nemaKutijeZiv" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="uginuli štakor"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/uginuliStakorZiv" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:text="uginuli miš"
+                android:layout_marginBottom="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/uginuliMisZiv" />
+        </GridLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/androidBlue"
+                android:id="@+id/dot1"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/colorPrimary"
+                android:id="@+id/dot2"/>
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/circle"
+                android:tint="@color/colorPrimary"
+                android:id="@+id/dot3"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

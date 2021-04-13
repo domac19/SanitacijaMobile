@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "components": [
+    "Microsoft.VisualStudio.Component.CoreEditor",
+    "Microsoft.VisualStudio.Workload.CoreEditor",
+    "Microsoft.VisualStudio.Component.NuGet",
+    "Microsoft.Net.Component.4.6.1.TargetingPack",
+    "Microsoft.VisualStudio.Component.Roslyn.Compiler",
+    "Microsoft.VisualStudio.Component.Roslyn.LanguageServices",
+    "Microsoft.VisualStudio.Component.FSharp",
+    "Microsoft.Net.Core.Component.SDK.2.1",
+    "Microsoft.NetCore.ComponentGroup.DevelopmentTools.2.1",
+    "Microsoft.Net.Component.4.7.2.SDK",
+    "Microsoft.Net.Component.4.7.2.TargetingPack",
+    "Microsoft.Net.ComponentGroup.DevelopmentPrerequisites",
+    "Microsoft.Component.MSBuild",
+    "Microsoft.VisualStudio.Component.IntelliCode",
+    "Component.OpenJDK",
+    "Microsoft.VisualStudio.Component.MonoDebugger",
+    "Microsoft.VisualStudio.Component.Merq",
+    "Component.Xamarin.RemotedSimulator",
+    "Microsoft.VisualStudio.ComponentGroup.WebToolsExtensions.TemplateEngine",
+    "Component.Xamarin",
+    "Component.Android.SDK28",
+    "Microsoft.VisualStudio.Workload.NetCrossPlat"
+  ]
+}

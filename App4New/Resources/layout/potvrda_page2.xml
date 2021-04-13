@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <ScrollView
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+            <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:orientation="vertical"
+                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+			            android:textSize="40px"
+			            android:textColor="#ff0288d1"
+			            android:text="Djelatnost"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView1" />
+                    <TextView
+			            android:textSize="40px"
+			            android:textColor="#ff0288d1"
+			            android:text="Tip posla"
+			            android:layout_width="125dp"
+			            android:layout_height="wrap_content"
+                        android:gravity="center"
+			            android:id="@+id/tipPoslaTV" />
+                    <TextView
+                        android:layout_marginLeft="20dp"
+			            android:textSize="40px"
+			            android:textColor="#ff0288d1"
+			            android:text="Broj objekata"
+			            android:layout_width="350dp"
+			            android:layout_height="wrap_content"
+                        android:gravity="center"
+			            android:id="@+id/brojObjekataTV" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+					    android:text="Deratizacija"
+					    android:layout_marginBottom="10dp"
+					    android:id="@+id/deratizacijaBtn" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="125dp"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:visibility="invisible"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+				            android:text="Postavljanje materijala"
+				            android:id="@+id/postavljanjeMaterijala" />
+			            <CheckBox
+                            android:visibility="invisible"
+				            android:text="Kontrola"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+				            android:id="@+id/kontrola" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataDeratizacijaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDeratizacija" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataDeratizacija2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDeratizacija2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+					    android:layout_marginBottom="10dp"
+					    android:text="Dezinsekcija"
+					    android:id="@+id/dezinsekcijaBtn" />
+                    <CheckBox
+                        android:visibility="invisible"
+                        android:layout_height="match_parent"
+                        android:layout_width="125dp"
+					    android:layout_marginBottom="10dp"
+				        android:text="Postavljanje lovki"
+				        android:id="@+id/postavljanjeLovki" />
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataDezinsekcijaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto2" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezinsekcija" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataDezinsekcija2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezinsekcija2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+					    android:layout_marginBottom="10dp"
+					    android:text="Dezinfekcija"
+					    android:id="@+id/dezinfekcijaBtn" />
+                    <CheckBox
+                        android:visibility="invisible"
+                        android:layout_height="match_parent"
+                        android:layout_width="125dp"
+					    android:layout_marginBottom="10dp"
+				        android:text="Tretman"
+				        android:id="@+id/tretman"/>
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataDezinfekcijaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto4" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezinfekcija" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataDezinfekcija2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezinfekcija2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_height="match_parent"
+                        android:layout_width="200dp"
+					    android:layout_marginBottom="10dp"
+					    android:text="Zaštita bilja"
+					    android:id="@+id/zastitaBiljaBtn" />
+                    <CheckBox
+                        android:visibility="invisible"
+                        android:layout_height="match_parent"
+                        android:layout_width="125dp"
+					    android:layout_marginBottom="10dp"
+				        android:text="Tretman"
+				        android:id="@+id/tretman2"/>
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataZastitaBiljaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto6" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataZastitaBilja" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataZastitaBilja2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataZastitaBilja2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Dezodorizacija"
+					    android:id="@+id/dezodorizacijaBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataDezodorizacijaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto8" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezodorizacija" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataDezodorizacija2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataDezodorizacija2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Suzbijanje štetnika"
+					    android:id="@+id/suzbijanjeStetnikaBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataSuzbijanjeStetnikaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto10" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataSuzbijanjeStetnika" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataSuzbijanjeStetnika2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataSuzbijanjeStetnika2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Kontrolni izvid insekti"
+					    android:id="@+id/KIInsektiBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataKIInsektiLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto12" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataKIInsekti" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataKIInsekti2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataKIInsekti2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Kontrolni izvid glodavaca"
+					    android:id="@+id/KIGlodavciBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataKIGlodavciLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto14" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataKIGlodavci" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataKIGlodavci2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataKIGlodavci2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Uzimanje briseva"
+					    android:id="@+id/uzimanjeBrisevaBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataUzimanjeBrisevaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto16" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataUzimanjeBriseva" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataUzimanjeBriseva2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataUzimanjeBriseva2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+					    android:text="Suzbijanje korova"
+					    android:id="@+id/suzbijanjeKorovaBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekataSuzbijanjeKorovaLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto18" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataSuzbijanjeKorova" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekataSuzbijanjeKorova2TV" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekataSuzbijanjeKorova2" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="200dp"
+				        android:text="Košnja trave"
+				        android:id="@+id/kosnjaTraveBtn" />
+                    <LinearLayout
+                        android:layout_marginLeft="125dp"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:id="@+id/brObjekatakosnjaTraveLayout"
+                        android:visibility="invisible">
+                        <TextView
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 1:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/nesto20" />
+                        <EditText
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekatakosnjaTrave" />
+                        <TextView
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="20dp"
+			                android:textSize="35px"
+			                android:textColor="#ff0288d1"
+			                android:text="Tip 2:"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+			                android:id="@+id/brObjekatakosnjaTrave2TV" />
+                        <EditText
+                            android:layout_marginLeft="175dp"
+                            android:inputType="number"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/brObjekatakosnjaTrave2" />
+                    </LinearLayout>
+                </LinearLayout>
+	        </LinearLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</RelativeLayout>

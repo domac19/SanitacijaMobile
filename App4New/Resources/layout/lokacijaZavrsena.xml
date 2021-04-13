@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <TextView
+        android:padding="20dp"
+        android:textSize="40px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/prikazText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_margin="20dp">
+        <Button
+            android:paddingHorizontal="20dp"
+            android:width="120dp"
+            android:text="Odustani"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@mipmap/cancelBtn"
+            android:textColor="@android:color/holo_red_dark"
+            android:id="@+id/odustaniBtn"
+            android:textSize="30px"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:width="120dp"
+            android:text="spremi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@mipmap/saveBtn"
+            android:textColor="@android:color/holo_green_dark"
+            android:id="@+id/spremiBtn"
+            android:textSize="30px"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    
+</LinearLayout>

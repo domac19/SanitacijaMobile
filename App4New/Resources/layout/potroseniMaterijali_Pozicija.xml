@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <GridLayout
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:id="@+id/gridLjep">
+        <TextView
+            android:layout_marginBottom="10dp"
+			android:text="Partner"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"/>
+		<TextView
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/partnerData"
+            android:textSize="35px"/>
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"
+			android:text="Lokacija"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView4" />
+		<TextView
+            android:textSize="35px"
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/lokacijaData" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"
+			android:text="Pozicija"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView5" />
+		<TextView
+            android:textSize="35px"
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/pozicijaData" />
+    </GridLayout>
+    
+	<ScrollView
+        android:layout_marginTop="170dp"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/prikazMaterijala">
+		<HorizontalScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<LinearLayout
+					android:layout_marginRight="40dp"
+                    android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp">
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="50dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="R.Br"
+						android:id="@+id/text1"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="70dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="Šifra"
+						android:id="@+id/text2"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="200dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Naziv"
+						android:id="@+id/text3"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Količina"
+						android:id="@+id/text4"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Cijena"
+						android:id="@+id/text5"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+						android:layout_height="match_parent"
+                        android:textSize="35px"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Iznos"
+						android:id="@+id/text6"
+						android:textStyle="bold" />
+				</LinearLayout>
+				<android.support.v7.widget.RecyclerView
+					android:id="@+id/materijaliListView"
+					android:scrollbars="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+		</HorizontalScrollView>
+	</ScrollView>
+    <TextView
+        android:text="Nema potrošenih materijala!"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message" />
+
+    <RelativeLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp">
+		<TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+			android:text="Ukupno Materijali:"
+            android:textStyle="bold"
+            android:textSize="35px"
+			android:layout_width="160dp"
+			android:layout_height="50dp"
+			android:id="@+id/textView1" />
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="160dp"
+			android:text="00.00 kn"
+            android:textSize="35px"
+            android:textStyle="bold"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:id="@+id/ukupanIznosTextView" />
+        <Button
+            android:layout_alignParentRight="true"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+            android:background="@mipmap/addBtn"
+		    android:id="@+id/noviMaterijalBtn" />
+    </RelativeLayout>
+</RelativeLayout>

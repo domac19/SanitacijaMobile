@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+    <GridLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:id="@+id/gridLjep">
+        <TextView
+            android:layout_marginBottom="10dp"
+			android:text="Partner"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView2"
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"/>
+		<TextView
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="180dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/partnerData"
+            android:textSize="35px"/>
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"
+			android:text="Lokacija"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView4" />
+		<TextView
+            android:textSize="35px"
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/lokacijaData" />
+        <TextView
+            android:textStyle="bold"
+            android:textSize="40px"
+            android:textColor="@color/bluePrimary"
+			android:text="Materijal"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/textView5" />
+		<TextView
+            android:textSize="35px"
+			android:text="Text"
+			android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+			android:id="@+id/materijalData" />
+    </GridLayout>
+    
+    <LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="50dp">
+        <TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textAlignment="center"
+			android:text="POZICIJA"
+			android:id="@+id/text2"
+			android:textStyle="bold" />
+		<TextView
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="match_parent"
+			android:gravity="center"
+			android:textAlignment="center"
+			android:text="KOLIČINA"
+			android:id="@+id/text1"
+			android:textStyle="bold" />
+	</LinearLayout>
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/materijaliListView"/>
+
+    <TextView
+        android:layout_margin="50dp"
+        android:text="We couldn't find a match for your search"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultMessage" />
+</LinearLayout>

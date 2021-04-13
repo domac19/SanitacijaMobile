@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textAlignment="center"
+                android:text="UTVRĐIVANJE STUPNJA INFESTACIJE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/naslovTextView"
+                android:textSize="50px"
+                android:textColor="#ff0288d1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/editLayout">
+
+                <HorizontalScrollView
+                    android:layout_marginTop="40dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+                    android:id="@+id/datePickerLayout1">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textAlignment="center"
+                                android:text="Glodavci - datum izlaganja klopki"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/datumIzlaganjaGlodavacaTV"
+                                android:layout_marginBottom="15dp"
+                                android:textSize="35px"
+                                android:textColor="#ff0288d1"/>
+                            <DatePicker
+				                android:layout_width="match_parent"
+				                android:layout_height="400.0dp"
+				                android:id="@+id/datumIzlaganjaGlodavci"
+				                android:layout_marginHorizontal="40px"
+				                android:layout_marginTop="0.0dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                           <TextView
+                                android:textAlignment="center"
+                                android:text="Glodavci - datum izvida"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/datumIzvidaGlodavacaTV"
+                                android:layout_marginBottom="15dp"
+                                android:textSize="35px"
+                                android:textColor="#ff0288d1"/>
+                            <DatePicker
+				                android:layout_width="match_parent"
+				                android:layout_height="400.0dp"
+				                android:id="@+id/datumIzvidaGlodavci"
+				                android:layout_marginHorizontal="40px"
+				                android:layout_marginTop="0.0dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <EditText
+                    android:inputType="text"
+                    android:layout_marginVertical="20dp"
+                    android:hint="Zapažanja..."
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/zapazanjaGlodavciInput" />
+
+                <HorizontalScrollView
+                    android:layout_marginTop="60dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+                    android:id="@+id/datePickerLayout2">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textAlignment="center"
+                                android:text="Insekti - datum izlaganja klopki"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/datumIzlaganjaInsekataTV"
+                                android:layout_marginBottom="15dp"
+                                android:textSize="35px"
+                                android:textColor="#ff0288d1"/>
+                            <DatePicker
+				                android:layout_width="match_parent"
+				                android:layout_height="400.0dp"
+				                android:id="@+id/datumIzlaganjaInsekti"
+				                android:layout_marginHorizontal="40px"
+				                android:layout_marginTop="0.0dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textAlignment="center"
+                                android:text="Insekti - datum izvida"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/datumIzvidaInsekataTV"
+                                android:layout_marginBottom="15dp"
+                                android:textSize="35px"
+                                android:textColor="#ff0288d1"/>
+                            <DatePicker
+				                android:layout_width="match_parent"
+				                android:layout_height="400.0dp"
+				                android:id="@+id/datumIzvidaInsekti"
+				                android:layout_marginHorizontal="40px"
+				                android:layout_marginTop="0.0dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <EditText
+                    android:inputType="text"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginBottom="100dp"
+                    android:hint="Zapažanja..."
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/zapazanjaInsektiInput" />
+
+            </LinearLayout>
+
+           
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/showLayout">
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/datumLayout1">
+                    <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Glodavci - datum izlaganja klopki"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView122" />
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="40px"
+                        android:textColor="@android:color/darker_gray"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/datumIzlaganjaGlodavciTV" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/datumLayout2">
+                    <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Glodavci - datum izvida"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView122" />
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="40px"
+                        android:textColor="@android:color/darker_gray"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/datumIzvidaGlodavciTV" />
+                </LinearLayout>
+
+                <EditText
+                    android:inputType="text"
+                    android:layout_marginVertical="20dp"
+                    android:hint="Zapažanja..."
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/zapazanjaGlodavciInput1" />
+
+                <LinearLayout
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/datumLayout3">
+                    <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Insekti - datum izlaganja klopki"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView123" />
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="40px"
+                        android:textColor="@android:color/darker_gray"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/datumIzlaganjaInsektiTV" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/datumLayout4">
+                    <TextView
+                        android:textSize="40px"
+                        android:textColor="#ff0288d1"
+			            android:text="Glodavci - datum izvida"
+			            android:layout_width="200dp"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/textView124" />
+                    <TextView
+                        android:gravity="end"
+                        android:textSize="40px"
+                        android:textColor="@android:color/darker_gray"
+			            android:text="Vrijeme izvida:"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:id="@+id/datumIzvidaInsektiTV" />
+                </LinearLayout>
+
+                <EditText
+                    android:inputType="text"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginBottom="100dp"
+                    android:hint="Zapažanja..."
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:id="@+id/zapazanjaInsektiInput1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="40dp"
+                android:textSize="40px"
+                android:textColor="#ff0288d1"
+			    android:text="Glodavci - kritične točke"
+			    android:layout_width="200dp"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/glodavciKriticneTockeTV" />
+		    <EditText
+                android:inputType="text"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/glodavciKriticneTockeInput" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="40px"
+                android:textColor="#ff0288d1"
+			    android:text="Insekti - kritične točke"
+			    android:layout_width="200dp"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/insektiKriticneTockeTV" />
+		    <EditText
+                android:inputType="text"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/insektiKriticneTockeInput" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="40px"
+                android:textColor="#ff0288d1"
+			    android:text="Preporuke za uklanjanje nedostataka zabilježenih na objektu: "
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/preporukeTV" />
+		    <EditText
+                android:inputType="text"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/preporukeInput" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="40px"
+                android:textColor="#ff0288d1"
+			    android:text="Ostale napomene: "
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/napomeneTV" />
+		    <EditText
+                android:layout_marginBottom="50dp"
+                android:inputType="text"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/napomeneInput" />
+
+            <LinearLayout
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/dot1"/>
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/androidBlue"
+                        android:id="@+id/dot2"/>
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:src="@mipmap/circle"
+                        android:tint="@color/colorPrimary"
+                        android:id="@+id/dot3"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>   
+</LinearLayout>

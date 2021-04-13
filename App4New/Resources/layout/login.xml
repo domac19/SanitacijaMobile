@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	 <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+
+	<RelativeLayout
+        android:id="@+id/prijava"
+		android:layout_marginTop="60dp"
+		android:layout_marginHorizontal="20dp"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_marginTop="60dp"
+			android:id="@+id/username"
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="30dp"
+				android:layout_height="20dp"
+				android:layout_marginRight="10dp"
+				android:src="@mipmap/account_outline"
+				android:tint="@color/bluePrimary"
+				android:id="@+id/accountIcon"/>
+			<TextView
+				android:layout_gravity="center"
+				android:text="Korisničko ime"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:textColor="@color/bluePrimary"
+				android:textSize="20dp"
+				android:id="@+id/usernameTextView" />
+		</LinearLayout>
+		<EditText
+			android:paddingLeft="10dp"
+			android:paddingBottom="10dp"
+			android:layout_marginTop="60dp"
+			android:inputType="text"
+			android:textSize="18dp"
+			android:textColor="@color/white"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/usernameInput" />
+		<LinearLayout
+			android:id="@+id/password"
+			android:orientation="horizontal"
+			android:layout_marginTop="140dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+			<ImageView
+				android:layout_gravity="center"
+				android:layout_width="30dp"
+				android:layout_height="20dp"
+				android:layout_marginRight="10dp"
+				android:src="@mipmap/lock"
+				android:tint="@color/bluePrimary"
+				android:id="@+id/passwordIcon"/>
+			<TextView
+				android:layout_gravity="center"
+				android:text="Lozinka"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minWidth="25px"
+				android:minHeight="25px"
+				android:textColor="@color/bluePrimary"
+				android:textSize="20dp"
+				android:id="@+id/passwordTextView" />
+		</LinearLayout>
+		<EditText
+			android:paddingLeft="10dp"
+			android:paddingBottom="10dp"
+			android:layout_marginTop="140dp"
+			android:textSize="18dp"
+			android:textColor="@color/white"
+			android:inputType="textPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/paswordInput" />
+		<Button
+			android:text="Prijava"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:paddingHorizontal="40dp"
+			android:id="@+id/loginBtn"
+			android:background="@mipmap/borderbluebtn"
+			android:textColor="@color/bluePrimary"
+			android:textSize="40px"
+			android:textStyle="bold"
+			android:layout_marginTop="200dp"/>
+		<TextView
+			android:text="Upisali ste netočno korisničko ime ili lozinku*"
+			android:visibility="invisible"
+			android:layout_marginTop="260dp"
+			android:textAlignment="center"
+			android:textColor="@color/redPrimary"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/errMessage" />
+
+		<LinearLayout
+			android:visibility="invisible"
+			android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="280dp"
+			android:gravity="center">
+			<ProgressBar
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/progressBar1" />
+			<TextView
+				android:layout_marginLeft="15dp"
+				android:text="Sinkronizacija matičnih podataka"
+				android:textAppearance="?android:attr/textAppearanceSmall"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/textiew10"/>
+		</LinearLayout>
+
+		<CheckBox
+			android:layout_marginTop="350dp"
+            android:layout_height="wrap_content"
+            android:text="zapamti prijavu"
+            android:checked="false"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:id="@+id/zapamtiPrijavu" />
+	</RelativeLayout>
+
+	<TextView
+		android:text="Verzija: 1.0"
+		android:textAppearance="?android:attr/textAppearanceSmall"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="bottom"
+		android:textAlignment="textEnd"
+		android:layout_marginBottom="10dp"
+		android:layout_marginRight="20dp"
+		android:id="@+id/verzijaTextView"/>
+</RelativeLayout>

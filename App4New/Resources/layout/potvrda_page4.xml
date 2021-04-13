@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+		<HorizontalScrollView
+            android:layout_marginTop="60dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<LinearLayout
+					android:orientation="horizontal"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp">
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="50dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="R.Br"
+						android:id="@+id/text1"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="70dp"
+						android:layout_height="match_parent"
+						android:gravity="center"
+                        android:textSize="35px"
+						android:textAlignment="center"
+						android:text="Šifra"
+						android:id="@+id/text2"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="200dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Naziv"
+						android:id="@+id/text3"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Količina"
+						android:id="@+id/text4"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+                        android:textSize="35px"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Cijena"
+						android:id="@+id/text5"
+						android:textStyle="bold" />
+					<TextView
+                        android:textColor="@color/white"
+						android:layout_width="100dp"
+						android:layout_height="match_parent"
+                        android:textSize="35px"
+						android:gravity="center"
+						android:textAlignment="center"
+						android:text="Iznos"
+						android:id="@+id/text6"
+						android:textStyle="bold" />
+				</LinearLayout>
+                <ListView
+                    android:id="@+id/materijaliListView"
+					android:scrollbars="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"/>
+			</LinearLayout>
+		</HorizontalScrollView>
+    <TextView
+        android:text="Nema potrošenih materijala!"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message" />
+    <LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+			android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+			    android:text="Ukupno Materijali:"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textSize="35px"
+			    android:layout_width="100dp"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/textView1" />
+            <TextView
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:textSize="35px"
+                android:textStyle="bold"
+			    android:layout_width="130dp"
+                android:text="00.00 kn"
+			    android:layout_height="wrap_content"
+			    android:id="@+id/ukupanIznosTextView" />
+            <Button
+                android:text="Izdaj potvrdu"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@color/green"
+                android:background="@mipmap/saveBtn"
+                android:id="@+id/izdajPotvrdu"
+                android:textSize="30px"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

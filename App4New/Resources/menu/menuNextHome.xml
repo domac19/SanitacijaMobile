@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--For all properties see: http://developer.android.com/guide/topics/resources/menu-resource.html-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/next_btn"
+        android:showAsAction="ifRoom"
+        android:title="naprijed"
+        android:icon="@mipmap/arrow_right"/>
+    <group android:checkableBehavior="single"
+        android:id="@+id/group_feature1">
+
+        <item android:id="@+id/home_btn"
+            android:title="Početna"
+            android:tooltipText="Početna"
+            android:icon="@mipmap/home"/>
+
+        <item android:id="@+id/newDer"
+            android:tooltipText="Radni nalozi"
+            android:title="Radni nalozi"
+            android:icon="@mipmap/plus"
+            android:iconTint="@android:color/holo_green_dark"/>
+
+        <item android:id="@+id/prikazAnketa_btn"
+            android:tooltipText="Prikaz odradenih anketa"
+            android:title="Prikaz odradenih anketa"
+            android:icon="@mipmap/arrow_left"/>
+
+        <item android:id="@+id/prikazMaterijala_btn"
+            android:tooltipText="Prikaz potrošenih materijala"
+            android:title="Prikaz potrošenih materijala"
+            android:icon="@mipmap/arrow_left"/>
+    </group>
+</menu>

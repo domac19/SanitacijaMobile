@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/bluePrimary"
+		            android:text="Godina"
+		            android:textSize="40px"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:id="@+id/godinaTextView"
+                    android:layout_marginRight="20dp"/>
+		        <EditText
+                    android:text="2020"
+			        android:inputType="number"
+			        android:layout_width="60dp"
+		            android:layout_height="wrap_content"
+		            android:id="@+id/godinaInput" />
+            </LinearLayout>
+            <TextView
+                android:text="Unesite ispravnu godinu*"                
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:id="@+id/messageGodina"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/bluePrimary"
+		        android:text="Datum Od"
+                android:gravity="center"
+		        android:textSize="35px"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/datumOdTV"/>
+            <CalendarView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/kalendarOd" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/bluePrimary"
+		        android:text="Datum Do"
+                android:gravity="center"
+		        android:textSize="35px"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/datumDoTV"/>
+            <CalendarView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/kalendarDo" />
+            <TextView
+                android:layout_margin="5dp"
+                android:text="Uskladite datume za početak i kraj radnog naloga*"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/messageKalendar"/>
+            <TextView
+                android:text="Voditelj"
+                android:textSize="40px"
+                android:textColor="@color/bluePrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/voditeljTV" />
+            <Spinner
+                android:layout_marginHorizontal="20dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:enabled="false"
+		        android:id="@+id/spinnerVoditelj" />
+            <TextView
+                android:text="Skladište"
+                android:textSize="40px"
+                android:textColor="@color/bluePrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/skladisteTV" />
+            <Spinner
+                android:layout_marginHorizontal="20dp"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:enabled="false"
+		        android:id="@+id/spinnerSkladiste" />
+            <LinearLayout
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginVertical="20dp">
+                <Button
+                    android:paddingHorizontal="20dp"
+                    android:width="120dp"
+                    android:text="Odustani"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/cancelBtn"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:id="@+id/odustaniBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"/>
+                <Button
+                    android:width="120dp"
+                    android:text="Spremi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@mipmap/saveBtn"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:id="@+id/spremiBtn"
+                    android:textSize="30px"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

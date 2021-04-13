@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#ff0288d1"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:layout_marginVertical="10dp">
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+			android:text="Komitent"
+			android:textSize="35px"
+			android:layout_width="0dp"
+            android:layout_height="wrap_content"
+			android:id="@+id/lokacijaTextView"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+		    android:text="Lokacija"
+		    android:textSize="35px"
+		    android:layout_width="0dp"
+            android:layout_height="wrap_content"
+		    android:id="@+id/lokacijaTextView"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp">
+        <Button
+            android:textColor="#ff0288d1"
+            android:background="@mipmap/borderBlueBtn"
+            android:layout_marginRight="5dp"
+            android:text="jdjhdds"
+            android:layout_weight="1"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+            android:padding="5dp"
+			android:id="@+id/odabirKomitentaBtn" />
+        <Button
+            android:textColor="#ff0288d1"
+            android:background="@mipmap/borderBlueBtn"
+            android:layout_marginLeft="5dp"
+            android:text="Prostor za razvrstavanje otpada"
+            android:layout_weight="1"
+			android:layout_width="0dp"
+            android:padding="5dp"
+			android:layout_height="match_parent"
+			android:id="@+id/odabirLokacijeBtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/novaLayout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#ff0288d1"
+                    android:text="Broj"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="35px"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barcodeTextView"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:textColor="#ff0288d1"
+                    android:text="Oznaka"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="35px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barcodeTextView"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/positionBrojInput" />
+                <EditText
+                    android:capitalize="characters"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/positionBrojOznakaInput" />
+                <Button
+                    android:layout_weight="10"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@mipmap/search"
+                    android:id="@+id/searchPozicijaNovaBtn" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginHorizontal="20dp"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/messagePosition"/>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:textColor="#ff0288d1"
+                android:text="Barcode"
+                android:textSize="35px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/barcodeTextView"/>
+            <LinearLayout
+                android:weightSum="110"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_weight="10"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@mipmap/barcode_scan"
+                    android:id="@+id/barcodeReaderBtn" />
+                <EditText
+                    android:layout_weight="90"
+                    android:inputType="number"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/barcodeInput"/>
+                <Button
+                    android:layout_weight="10"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@mipmap/search"
+                    android:id="@+id/searchBarcodeBtn" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginHorizontal="20dp"
+                android:visibility="invisible"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/messageBarcode"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginHorizontal="20dp"
+            android:textColor="#ff0288d1"
+            android:text="Opis Pozicije"
+            android:textSize="35px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/opisPozicijeTextView"
+            android:layout_marginTop="20dp"/>
+		<EditText
+            android:layout_marginHorizontal="20dp"
+            android:lines="3"
+            android:gravity="top"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:id="@+id/opisPozicije" />
+    </LinearLayout>
+</LinearLayout>

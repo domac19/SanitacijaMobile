@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:background="@mipmap/homeMade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarHomePage"/>
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/prikazAnketa">
+        <TextView
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/bluePrimary"
+			android:text="Radni nalog"
+			android:textSize="40px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/radniNalogTV"/>
+		<Spinner
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/spinnerRadniNalog" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:paddingHorizontal="20dp">
+			    <TextView
+                    android:textColor="@color/bluePrimary"
+				    android:text="Partner"
+				    android:textSize="40px"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/partnerTV"/>
+			    <Spinner
+                    android:layout_marginTop="10dp"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/spinnerPartner" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="50"
+                android:paddingHorizontal="20dp">
+                <TextView
+                    android:textColor="@color/bluePrimary"
+				    android:text="Lokacija"
+				    android:textSize="40px"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/lokacijaTV"/>
+                <Spinner
+                    android:layout_marginTop="10dp"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/spinnerLokacija" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:textColor="@color/redPrimary"
+            android:layout_margin="10dp"
+            android:text="Za ovu lokaciju je izdana potvrda!"
+            android:textSize="35px"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:id="@+id/messagePotvrda" />
+        
+        <ScrollView
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+            android:id="@+id/prikazMaterijala">
+		    <HorizontalScrollView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content">
+			    <LinearLayout
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:orientation="vertical">
+				    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+		                <TextView
+			                android:text="OZNAKA"
+                            android:textColor="@color/white"
+			                android:textSize="35px"
+			                android:layout_width="80dp"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:id="@+id/textView1" />
+		                <TextView
+			                android:text="OPIS POZICIJE"
+                            android:textColor="@color/white"
+			                android:textSize="35px"
+			                android:layout_width="200dp"
+			                android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:id="@+id/textView2" />
+		                <TextView
+			                android:text="EDIT TIME"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:textSize="35px"
+			                android:layout_width="100dp"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/textView3" />
+                        <TextView
+			                android:text="MATERIJALI"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:textSize="35px"
+			                android:layout_width="110dp"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/textView6" />
+                        <TextView
+			                android:text="IZVRŠENO"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:textSize="35px"
+			                android:layout_width="110dp"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/textView5" />
+                        <TextView
+			                android:text="OBRIŠI"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:textStyle="bold"
+			                android:textSize="35px"
+			                android:layout_width="100dp"
+			                android:layout_height="wrap_content"
+			                android:id="@+id/textView4" />
+                    </LinearLayout>
+				    <android.support.v7.widget.RecyclerView
+					    android:id="@+id/recyclerView"
+					    android:scrollbars="vertical"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"/>
+			    </LinearLayout>
+		    </HorizontalScrollView>
+	    </ScrollView>
+    </LinearLayout>
+    <TextView
+        android:text="Nema odrađenih anketa!"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message" />
+</RelativeLayout>

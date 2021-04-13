@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="#ff0288d1"
+        android:titleTextColor="@color/white"
+        android:minWidth="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarNewPC"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#ff0097a7">
+        <Button
+            android:text="back"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/previusBtn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:text="next"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/nextBtn"
+            android:layout_marginLeft="110dp"/>
+        <TextView
+            android:text="1/4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/pageTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Bar kod pozicije"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff0288d1"
+                android:id="@+id/barcodeTextView"/>
+            <TextView
+                android:text="P: 1234"
+                android:textColor="@android:color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/barcodeNumTextView" />
+        </RelativeLayout>
+
+        <GridLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:columnCount="6"
+           android:rowCount="1"
+           android:layout_marginTop="10dp">
+            <EditText
+                android:inputType="number"
+                android:layout_columnWeight="6"
+                android:layout_rowWeight="1"
+                android:id="@+id/barcodeInput"/>
+            <Button
+                android:text="Traži"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/searchBarcodeBtn" />
+        </GridLayout>
+        <TextView
+            android:visibility="invisible"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/messageBarcode"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="Partner"
+                android:textColor="#ff0288d1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/partnerTextView"
+                android:layout_marginTop="10dp"/>
+            <Spinner
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:id="@+id/spinnerPartner" />
+            <TextView
+                android:text="Lokacija"
+                android:textColor="#ff0288d1"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/locationTextView" />
+            <EditText
+                android:inputType="textMultiLine"
+                android:lines="3" 
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/locationInput" />
+            <TextView
+                android:textColor="#ff0288d1"
+                android:text="Pozicija"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/positionTextView"
+                android:layout_marginTop="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:inputType="number"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/positionBrojInput" />
+                <EditText
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/positionBrojOznakaInput" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <Button
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/pageOneBtn"
+            android:backgroundTint="#ff0288d1" />
+        <Button
+            android:text="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/pageTwoBtn" />
+        <Button
+            android:text="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/pageThreeBtn" />
+        <Button
+            android:text="4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/pageFourBtn" />
+    </LinearLayout>
+
+</LinearLayout>
